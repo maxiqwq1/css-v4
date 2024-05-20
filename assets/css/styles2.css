@@ -1,0 +1,186 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "menu"
+        "seccion-principal"
+        "paginacion"
+        "pie-de-pagina";
+    grid-template-columns: 1fr;
+    
+}
+
+
+
+.papacard{
+ 
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 700px;
+    background-color: #ebebeb;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    overflow-y: auto;
+  }
+  
+  
+  .card{
+    display: flex;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: 25px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+  
+  }
+
+  .card img{
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.card button{
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    background-color: #25527B;
+    margin: 0%;
+    border-radius: 10px;
+    height: 3rem;
+}
+
+  .Seleccion {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 80px;
+    border-radius: 10px;
+
+  }
+  
+  .Seleccion p{
+  
+    margin: 0;
+  }
+  
+  .Seleccion select{
+    
+  margin-top: 10px;
+  width: 250px;
+  }
+
+nav {
+    grid-area: menu;
+    background-color: #f0f0f0;
+    padding: 1em;
+    
+}
+
+nav .icono{
+    display: none;
+      height: 20px;
+      width: 65px;
+    }
+main {
+    grid-area: seccion-principal;
+    padding: 1em;
+}
+footer {
+    grid-area: pie-de-pagina;
+    background-color: #d8d8d8;
+    padding: 1em;
+    text-align: center;
+}
+.paginacion {
+    grid-area: paginacion;
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+            max-width: 1200px; /* Ancho máximo para centrar el contenido */
+            width: 100%;
+            
+}
+.centrar{
+
+    background-color: #f0f0f0;
+    width: 100%;
+}
+.paginacion div {
+    display: inline-block;
+    margin: 0 0.5em;
+    padding: 0.5em;
+    border: 1px solid #000;
+   
+   
+    
+}
+@media(max-width:725px){
+    .papacard{
+      grid-template-columns: 1fr 1fr;
+    }
+   
+nav{
+   
+    display: flex;
+    
+    background-color: #f0f0f0;
+    width: 100% ;
+    align-items: center;
+    justify-content: space-between;
+      
+      
+    color: blueviolet;
+    
+    
+  }
+  
+  
+ul{
+    
+    margin-right: 100px;
+}
+    }
+    
+  
+  @media(max-width:385px){
+    ul{
+        display: none;
+      }
+      nav .icono{
+        display: block;
+      }
+  .papacard{
+    grid-template-columns: 1fr  ;
+  
+  }
+  }
+@media (min-width: 726px) {
+    .container {
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-areas:
+            "menu seccion-principal seccion-principal "
+            "pie-de-pagina paginacion paginacion "
+            /* "pie-de-pagina pie-de-pagina pie-de-pagina"; */
+    }
+    nav {
+        grid-area: menu;
+    }
+    main {
+        grid-area: seccion-principal;
+    }
+    footer {
+        grid-area: pie-de-pagina;
+    }
+}
